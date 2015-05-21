@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>emaillist3</groupId>
-	<artifactId>emaillist3</artifactId>
+	<groupId>mysite3</groupId>
+	<artifactId>mysite3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -31,6 +31,12 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 
+		<!-- spring jdbc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
 
 		<!-- oracle jdbc -->
 		<dependency>
@@ -46,6 +52,20 @@
 			<version>1.2</version>
 		</dependency>
 
+		<!-- spring orm -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+
+
+		<!-- iBatis -->
+		<dependency>
+			<groupId>org.apache.ibatis</groupId>
+			<artifactId>ibatis-sqlmap</artifactId>
+			<version>2.3.4.726</version>
+		</dependency>
 
 
 	</dependencies>
@@ -57,7 +77,6 @@
 			<url>http://maven.jahia.org/maven2</url>
 		</repository>
 	</repositories>
-
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>

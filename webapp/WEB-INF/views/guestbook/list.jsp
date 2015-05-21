@@ -21,12 +21,12 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<c:import url="/WEB-INF/views/include/header.jsp" />
+			<c:import url="/WEB-INF/views/include/header.jsp">
+			</c:import>
 		</div>
 		<div id="content">
 			<div id="guestbook">
-				<form action="/mysite3/guestbook" method="post">
-					<input type='hidden' name="a" value="add">
+				<form action="insert" method="post">
 					<table border=1 width=500>
 						<tr>
 							<td>이름</td>
@@ -43,17 +43,19 @@
 					</table>
 				</form>
 				<br>
-				<c:forEach items="${requestScope.list }" var="vo">
+				<c:forEach items="${list }" var="vo">
 					<table width=510 border=1>
 						<tr>
 							<td>${vo.no }</td>
 							<td>${vo.id }</td>
 							<td>${vo.date }</td>
-							<td><a
-								href="/mysite3/views/guestbook/deleteform.jsp?no=${vo.no }">삭제</a></td>
+							<td><a href="/guestbook/delete?no=${vo.no }">삭제</a></td>
 						</tr>
 						<tr>
 							<td colspan=4>${fn:replace( vo.meg, newLineChar, "<br>" ) }</td>
+						</tr>
+						<tr>
+							<td colspan=4>${vo.meg }</td>
 						</tr>
 					</table>
 					<br>
@@ -61,10 +63,11 @@
 			</div>
 		</div>
 		<div id="navigation">
-			<c:import url="/WEB-INF/views/include/navigation.jsp" />
+			<c:import url="/WEB-INF/views/include/navigation.jsp">
+			</c:import>
 		</div>
 		<div id="footer">
-			<c:import url="/WEB-INF/views/include/footer.jsp" />
+			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 		</div>
 	</div>
 </body>

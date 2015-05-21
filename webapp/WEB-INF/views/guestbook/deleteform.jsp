@@ -6,6 +6,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 
 
+
 <!doctype html>
 <html>
 <head>
@@ -23,14 +24,13 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<jsp:include page="/WEB-INF/views/include/header.jsp" flush="false" />
+			<c:import url="/include/header.jsp" />
 		</div>
 		<div id="content">
 			<div id="guestbook" class="delete-form">
-				<form action="/mysite3/guestbook" method="post">
-				<input type='hidden' name="a" value="delete">
+				<form action="/mysite3/guestbook/delete" method="post">
 					<input type='hidden' name="no"
-						value="<%=Integer.parseInt(request.getParameter("no"))%>">
+						value="${param.no }">
 					
 						<label class="block-label">패스워드</label> <input name="pwd"
 							type="password">
@@ -40,10 +40,10 @@
 			</div>
 		</div>
 		<div id="navigation">
-			<jsp:include page="/WEB-INF/views/include/navigation.jsp" flush="false" />
+			<c:import url="/include/navigation.jsp" />
 		</div>
 		<div id="footer">
-			<jsp:include page="/WEB-INF/views/include/footer.jsp" flush="false" />
+			<c:import url="/include/footer.jsp" />
 		</div>
 	</div>
 </body>

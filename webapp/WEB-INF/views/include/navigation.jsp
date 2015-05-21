@@ -8,7 +8,7 @@
 
 	<li class="selected">${authMember.name }</li>
 
-	<li><a href="/mysite3/guestbook?a=list">방명록</a></li>
-	<li><a href="/mysite3/board?a=list">게시판</a></li>
+	<li><a href="/mysite3/guestbook/list">방명록</a></li>
+	<li><a href="/mysite3/board/board">게시판</a></li>
 
 </ul>
