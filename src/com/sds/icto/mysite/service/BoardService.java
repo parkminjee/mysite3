@@ -28,13 +28,15 @@ public class BoardService {
 		List<BoardVo> list = boardDao.fetchList();
 		return list;
 	}
+
 	
 	public void updateBoard(BoardVo vo){
 		boardDao.update(vo);
 	}
 	
-//	public BoardVo readBoard(int no){
-//		BoardVo vo = boardDao.read(no);
-//		return vo;
-//	}
+	public BoardVo readBoard(int no){
+		BoardVo boardVo = boardDao.read(no);
+		return boardVo;
+	}
+
 }

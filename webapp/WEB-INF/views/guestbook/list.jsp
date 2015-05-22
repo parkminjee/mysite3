@@ -30,7 +30,7 @@
 					<table border=1 width=500>
 						<tr>
 							<td>이름</td>
-							<td><input type="text" name="name"></td>
+							<td><input type="text" name="id"></td>
 							<td>비밀번호</td>
 							<td><input type="password" name="pwd"></td>
 						</tr>
@@ -49,14 +49,12 @@
 							<td>${vo.no }</td>
 							<td>${vo.id }</td>
 							<td>${vo.date }</td>
-							<td><a href="/guestbook/delete?no=${vo.no }">삭제</a></td>
+							<td><a href="delete?no=${vo.no }">삭제</a></td>
 						</tr>
 						<tr>
 							<td colspan=4>${fn:replace( vo.meg, newLineChar, "<br>" ) }</td>
 						</tr>
-						<tr>
-							<td colspan=4>${vo.meg }</td>
-						</tr>
+						
 					</table>
 					<br>
 				</c:forEach>

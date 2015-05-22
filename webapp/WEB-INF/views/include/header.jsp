@@ -16,8 +16,6 @@
 	</c:when>
 	<c:otherwise>
 
-		<li><a href="/mysite3/member/uinfo">회원정보수정</a>
-		<li>
 		<li><a href="/mysite3/member/logout">로그아웃</a>
 		<li>
 		<li>${authMember.name }님 안녕하세요 ^^;</li>

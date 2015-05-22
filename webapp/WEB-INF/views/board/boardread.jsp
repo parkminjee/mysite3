@@ -34,7 +34,7 @@
 				<div id="boardsub">
 					<h6>게시판설명</h6>
 				</div>
-				<a href="/mysite3/views/board/boardwrite.jsp">
+				<a href="boardwrite">
 					<button
 						class="button button--antiman button--round-m button--text-medium button--border-medium">
 						<i class="button__icon icon icon-plus"></i><span>글쓰기</span>
@@ -42,8 +42,7 @@
 					</button>
 				</a>
 				<div>
-						<input type='hidden' name="a" value="read">
-						<input type='hidden' name="no" value="no">
+						<input type='hidden' name="no" value="${read.no }">
 						
 						<table >
 							<tr>
@@ -66,13 +65,13 @@
 							</c:when>
 							<c:otherwise>
 								<td colspan=4 align=right><a
-									href="/mysite3/views/board/boarddelete.jsp">
+									href="boarddelete?no=${read.no }">
 										<button
 											class="button button--antiman button--round-m button--text-medium button--border-medium">
 											<i class="button__icon icon icon-plus"></i><span>삭제</span>
 
 										</button>
-								</a><a href="/mysite3/board?a=updateform&no=${read.no }">
+								</a><a href="boardupdate?no=${read.no }">
 										<button
 											class="button button--antiman button--round-m button--text-medium button--border-medium">
 											<i class="button__icon icon icon-plus"></i><span>수정</span>

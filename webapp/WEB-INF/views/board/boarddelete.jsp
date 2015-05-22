@@ -32,12 +32,12 @@
 							<form id="login-form" name="loginform" method="post">
 							<input type="hidden" name="a" value="delete">
 								<p>정말로 삭제하시겠습니까?</p>
-								<a href="/mysite3/views/board/board.jsp">
+								<a href="/mysite3/board?a=list">
 									<button
 										class="button button--antiman button--round-m button--text-medium button--border-medium">
 										<i class="button__icon icon icon-plus"></i><span>취소</span>
 									</button>
-								</a> <a href="/mysite3/views/board/board.jsp?a=deleteform&no=${delete.no }">
+								</a> <a href="boarddelete">
 									<button type="submit"
 										class="button button--antiman button--round-m button--text-medium button--border-medium">
 										<i class="button__icon icon icon-plus"></i><span>확인</span>

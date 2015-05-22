@@ -45,7 +45,7 @@
 				</a>
 
 				<div>
-					<form action="/mysite3/board" method="post">
+					<form action="boardwrite" method="post">
 					<input type='hidden' name="a" value="write">
 					<input type="hidden" value="${authMember.no}" id="member_no" name="member_no">
 				<input type="hidden" value="${authMember.name}"id="member_name" name="member_name"> 

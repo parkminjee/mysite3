@@ -23,7 +23,7 @@ public class GuestbookService {
 		guestbookDao.delete(no, pwd);
 	}
 	
-	public List<GuestbookVo> listGuestbook(GuestbookVo vo){
+	public List<GuestbookVo> listGuestbook(){
 		List<GuestbookVo> list = guestbookDao.fetchList();
 		return list;
 	}

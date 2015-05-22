@@ -1,6 +1,9 @@
 package com.sds.icto.mysite.repository;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.ibatis.SqlMapClientTemplate;
 import org.springframework.stereotype.Repository;
@@ -19,8 +22,7 @@ public class MemberDao {
 	}
 
 	public MemberVo getMember(MemberVo vo) {
-		
-		sqlMapClientTemplate.queryForObject("member.login");
-		return vo;
+		MemberVo vo1 = (MemberVo)sqlMapClientTemplate.queryForObject("member.login",vo);
+		return vo1;
 	}
 }

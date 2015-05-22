@@ -16,6 +16,7 @@ import org.springframework.orm.ibatis.SqlMapClientTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.sds.icto.mysite.domain.BoardVo;
+import com.sds.icto.mysite.domain.MemberVo;
 import com.sds.icto.mysite.exception.BoardDaoException;
 
 @Repository
@@ -44,12 +45,11 @@ public class BoardDao {
 	public void update(BoardVo vo) {
 		sqlMapClientTemplate.update("board.update",vo);
 	}
+	
+	public BoardVo read(int no) {
+		BoardVo vo = (BoardVo)sqlMapClientTemplate.queryForObject("board.read",no);
+		return vo;
+	}
 
-//	public BoardVo read(int no){
-//		@SuppressWarnings("rawtypes")
-//		Map map = new HashMap();
-//		map.put("n", no);
-//		BoardVo vo = sqlMapClientTemplate.queryForMap("board.read",map);
-//		return vo;
-//	}
+
 }

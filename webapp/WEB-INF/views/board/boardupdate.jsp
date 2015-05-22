@@ -36,7 +36,7 @@
 				<div id="boardsub">
 					<h5>게시판설명</h5>
 				</div>
-				<a href="/mysite3/views/board/boardwrite.jsp">
+				<a href="boardwrite">
 					<button
 						class="button button--antiman button--round-m button--text-medium button--border-medium">
 						<i class="button__icon icon icon-plus"></i><span>글쓰기</span>
@@ -45,12 +45,13 @@
 				</a>
 
 				<div>
-					<form action="/mysite3/board" method="post">
-					<input type='hidden' name="a" value="update">
+					<form action="" method="post">
+					
 					<input type="hidden" value="${authMember.no}" id="member_no" name="member_no">
 				<input type="hidden" value="${authMember.name}"id="member_name" name="member_name"> 
 						<input type="hidden" value="${update.no}"id="no" name="no"> 
 						<input type="hidden" value="${update.reg_date}"id="reg_date" name="reg_date"> 
+						
 						
 						<table>
 							<tr>

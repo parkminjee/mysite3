@@ -24,11 +24,12 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<c:import url="/include/header.jsp" />
+			<c:import url="/WEB-INF/views/include/header.jsp">
+			</c:import>
 		</div>
 		<div id="content">
 			<div id="guestbook" class="delete-form">
-				<form action="/mysite3/guestbook/delete" method="post">
+				<form action="delete" method="post">
 					<input type='hidden' name="no"
 						value="${param.no }">
 					
@@ -40,10 +41,11 @@
 			</div>
 		</div>
 		<div id="navigation">
-			<c:import url="/include/navigation.jsp" />
+			<c:import url="/WEB-INF/views/include/navigation.jsp">
+			</c:import>
 		</div>
 		<div id="footer">
-			<c:import url="/include/footer.jsp" />
+			<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 		</div>
 	</div>
 </body>

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.sds.icto.mysite.domain.BoardVo;
 import com.sds.icto.mysite.domain.GuestbookVo;
 import com.sds.icto.mysite.service.GuestbookService;
 
@@ -24,8 +25,9 @@ public class GuestbookController {
 	GuestbookService guestbookService;
 	
 	@RequestMapping("/list")
-	public String index(@ModelAttribute GuestbookVo vo) {
-		guestbookService.listGuestbook(vo);
+	public String index(Model model) {
+		List<GuestbookVo> list = guestbookService.listGuestbook();
+		model.addAttribute("list",list);
 		return "guestbook/list";
 	}
 	
@@ -38,12 +40,12 @@ public class GuestbookController {
 	public String delete(@RequestParam int no,
 			@RequestParam String pwd){
 		guestbookService.deleteGuestbook(no, pwd);
-		return "redirect:/index";
+		return "redirect:/guestbook/list";
 	}
 	
-	@RequestMapping(value="/add",method=RequestMethod.POST)
+	@RequestMapping(value="/insert",method=RequestMethod.POST)
 	public String insert(@ModelAttribute GuestbookVo vo){
 		guestbookService.writeGuestbook(vo);
-		return "redirect:/index";
+		return "redirect:/guestbook/list";
 	}
 }

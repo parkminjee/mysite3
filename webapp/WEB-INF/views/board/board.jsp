@@ -34,7 +34,7 @@
 				<div id="boardsub">
 					<h5>게시판설명</h5>
 				</div>
-				<a href="/mysite3/views/board/boardwrite.jsp">
+				<a href="boardwrite">
 					<button
 						class="button button--antiman button--round-m button--text-medium button--border-medium">
 						<i class="button__icon icon icon-plus"></i><span>글쓰기</span>
@@ -57,7 +57,7 @@
 								<tr>
 									<td>${vo.no }</td>
 									<td><a
-										href="/mysite3/board?a=read&no=${vo.no }">${vo.title }</a></td>
+										href="boardread?no=${vo.no }">${vo.title }</a></td>
 									<td>${vo.member_name }</td>
 									<td>${vo.reg_date }</td>
 								</tr>
